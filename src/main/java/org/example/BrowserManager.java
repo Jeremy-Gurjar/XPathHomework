@@ -8,7 +8,8 @@ import java.time.Duration;
 
 public class BrowserManager extends Utils {
 
-    static String browserName = "Chrome";
+    //Opens preferred browser
+    static String browserName = "Edge";
     public static void openBrowser() {
         if (browserName.equalsIgnoreCase("Chrome")) {
             System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
@@ -31,6 +32,7 @@ public class BrowserManager extends Utils {
         driver.get("https://demo.nopcommerce.com/");
     }
 
+    //Closes browser
     public void closeBrowser() {
 
         driver.close();

@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTest extends BrowserManager {
 
+    //Opens browser before method
     @BeforeMethod
     //open browser method
     public void setUp() {
@@ -13,7 +14,7 @@ public class BaseTest extends BrowserManager {
     }
 
     @AfterMethod
-    //close browser method
+    //close browser after method
     public void tearDown(ITestResult result) {
         if (!(result.isSuccess())) {
             captureScreenshot(result.getName());
